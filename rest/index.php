@@ -34,5 +34,8 @@ require_once 'routes/FlightsRoutes.php';
 require_once 'routes/LocationRoutes.php';
 require_once 'routes/TicketRoutes.php';
 
+error_reporting(E_ALL & ~E_DEPRECATED);
+
+
 Flight::start();
 ?>

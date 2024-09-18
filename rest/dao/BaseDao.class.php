@@ -11,7 +11,7 @@ public function __construct($table_name){
         $servername = "localhost";
         $username = "root";
         $password = "root";
-        $port = "3308"; // Change this to your specific port
+        $port = "3306"; 
         $schema = "flightdb";
     
         $this->conn = new PDO("mysql:host=$servername;port=$port;dbname=$schema", $username, $password);
@@ -127,5 +127,3 @@ public function __construct($table_name){
     }
 }
  ?>
- 
-

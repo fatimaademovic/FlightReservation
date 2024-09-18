@@ -12,14 +12,13 @@
 * )
 */
 Flight::route("GET /location", function(){
-    Flight::json(Flight::location_service()->get_all());
+   Flight::json(Flight::location_service()->get_all());
 });
-
 
 /**
 * @OA\Get(
 *     path="/location/{id}",
-*     tags={"Location"},
+*     tags={"Flight"},
 *     summary="Get location by ID",
 *     @OA\Parameter(
 *         name="id",
@@ -36,6 +35,9 @@ Flight::route("GET /location", function(){
 *     )
 * )
 */
+
+
+
 Flight::route("GET /location/@id", function($id){
    Flight::json(Flight::location_service()->get_by_id($id));
 });
