@@ -8,11 +8,11 @@ class BaseDao{
 public function __construct($table_name){
     $this->table_name = $table_name;
     try {
-        $servername = "localhost";
-        $username = "root";
-        $password = "root";
+        $servername = "db4free.net";
+        $username = "my_flight_db";
+        $password = "my_flight_db";
         $port = "3306"; 
-        $schema = "flightdb";
+        $schema = "my_flight_db";
     
         $this->conn = new PDO("mysql:host=$servername;port=$port;dbname=$schema", $username, $password);
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
