@@ -12,12 +12,12 @@ Flight::register('ticket_service', "TicketService");
 
 /* Add CORS headers */
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Methods: GET, POST, PUT, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 Flight::route('OPTIONS /*', function(){
-  header('Allow: GET, POST, OPTIONS');
-  header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+  header('Allow: GET, POST, PUT, OPTIONS');
+  header('Access-Control-Allow-Methods: GET, POST, PUT, OPTIONS');
   header('Access-Control-Allow-Headers: Content-Type, Authorization');
   Flight::json([]);
 });
